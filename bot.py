@@ -1,15 +1,14 @@
-import logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger()
+# from core.bot import Bot
+
 import discord
 from discord.ext import commands
 
 
 client = commands.Bot(command_prefix='$')
-
+# client.add_cog(Bot(client))
 @client.event
 async def on_ready():
-    logger.info('Bot is ready.')
+    print('Bot is ready.')
 
 
 @client.command()
@@ -23,6 +22,6 @@ async def _eight_ball(ctx, *, question):
     responses = ['a1', 'b2', 'c3']
     await ctx.send(f'Question: {question}\nMagic 8ball Says: {random.choice(responses)}')
 
-
-client_token = 'NzEzODA5NDE2MDYzMDI1MTgz.Xsl8JA.jWAJjyf8FqicGSumjzUil9rDoyU'
+import os
+client_token = os.environ.get('CLIENT_TOKEN')
 client.run(client_token)
