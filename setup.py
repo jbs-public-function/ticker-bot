@@ -9,7 +9,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name = "yfinance-discord-bot",
+    name = "ticker_bot",
     version = "0.0.1",
     author = "jb",
     author_email = "jbs.public.function@gmail.com",
@@ -17,11 +17,6 @@ setup(
     license = "BSD",
     keywords = "discord python yfinance",
     url = "https://github.com/jbs-public-function/ticker-bot",
-    packages=['an_example_pypi_project', 'tests'],
-    long_description=read('README'),
-    classifiers=[
-        "Development Status :: 3 - Alpha",
-        "Topic :: Utilities",
-        "License :: OSI Approved :: BSD License",
-    ],
+    packages=['ticker_bot'],
+    long_description=read('README.md'),
 )

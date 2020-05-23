@@ -15,7 +15,7 @@ async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
 
 
-from cogs import bot, ticker_bot
+from ticker_bot.cogs import bot, ticker_bot
 
 client.add_cog(bot.Bot(client))
 client.add_cog(ticker_bot.TickerBot(client))

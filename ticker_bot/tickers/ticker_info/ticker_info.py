@@ -1,0 +1,1 @@
+from ticker_bot.tickers.core.ticker import TickerBase

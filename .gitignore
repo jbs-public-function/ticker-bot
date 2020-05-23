@@ -1,6 +1,7 @@
 # Jupyter Notebooks and other junk
 *.ipynb
 client_token.txt
+.DS*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
