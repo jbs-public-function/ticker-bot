@@ -1,14 +1,14 @@
 # TickerBot
 
-### A bot to get information of a stock ticker
-##### ticker
+### A bot that interacts with stock tickersr
+#### ticker
 - 52 week high, low
 - Volume
 - Last Close price
 - has options
 
 ### options
-##### greeks
+#### greeks
 - delta; the rate of change between the options price and $1 change in underlying asset price
 - theta; rate of change between the option price and time
 - gamma; rate of change between delta and underlying asset price
