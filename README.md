@@ -1,14 +1,19 @@
 # TickerBot
 
-### A bot that interacts with stock tickersr
-#### ticker
+### A bot that interacts with stock tickers through yfinance
+#### requirements
+ - discord==1.0.1
+ - yfinance==0.1.5
+
+## functionality
+
+#### ticker information
 - 52 week high, low
 - Volume
 - Last Close price
 - has options
 
-### options
-#### greeks
+#### options
 - delta; the rate of change between the options price and $1 change in underlying asset price
 - theta; rate of change between the option price and time
 - gamma; rate of change between delta and underlying asset price
