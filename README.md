@@ -4,9 +4,9 @@
 #### requirements
  - discord==1.0.1
  - yfinance==0.1.5
-
+ - lxml==4.5.1
+ 
 ## functionality
-
 ### ticker information and commands
 #### General and Summary Information
 > $info GOOG, $summary GOOG
