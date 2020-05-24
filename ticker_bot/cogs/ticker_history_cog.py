@@ -12,6 +12,6 @@ class TickerHistoryCog(BaseCog):
     @commands.command(aliases=['price-history', '7day', 'weekly', 'week', 'hist'])
     async def history(self, ctx, *, ticker):
         history = TickerPriceHistory(ticker)
-        await ctx.send(f'7 Day Price History for ${ticker}')
+        await ctx.send(f'7 Day Price History for ${ticker.upper()}')
         for hist in self.format_table(history.ticker_one_week_price_history()):
             await ctx.send(hist)

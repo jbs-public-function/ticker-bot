@@ -12,6 +12,6 @@ class TickerCalendarCog(BaseCog):
     @commands.command(aliases=['earning', 'calendar'])
     async def earnings(self, ctx, *, ticker):
         calendar = TickerCalendar(ticker)
-        await ctx.send(f'Upcoming Earnings for ${ticker}')
+        await ctx.send(f'Upcoming Earnings for ${ticker.upper()}')
         for calendar in calendar.ticker_calendar_earnings():
             await ctx.send(calendar)
