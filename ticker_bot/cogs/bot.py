@@ -3,10 +3,10 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 class Bot(commands.Cog):
-    LABEL = 'Core Bot'
+    LABEL = 'BotBaseCog'
     def __init__(self, bot):
         self.bot = bot
-        self.logger = logging.getLogger('discord.cogs')
+        self.logger = logging.getLogger(f'discord.cogs.{self.LABEL}')
 
     @commands.Cog.listener()
     async def on_ready(self):
