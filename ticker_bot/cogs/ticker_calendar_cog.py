@@ -9,7 +9,7 @@ class TickerCalendarCog(BaseCog):
     def __init__(self, bot):
         super().__init__(bot)
 
-    @commands.command()
+    @commands.command(aliases=['earning', 'calendar'])
     async def earnings(self, ctx, *, ticker):
         calendar = TickerCalendar(ticker)
         await ctx.send(f'Upcoming Earnings for ${ticker}')

@@ -9,7 +9,7 @@ class TickerHistoryCog(BaseCog):
     def __init__(self, bot):
         super().__init__(bot)
 
-    @commands.command()
+    @commands.command(aliases=['price-history', '7day', 'weekly', 'week', 'hist'])
     async def history(self, ctx, *, ticker):
         history = TickerPriceHistory(ticker)
         await ctx.send(f'7 Day Price History for ${ticker}')

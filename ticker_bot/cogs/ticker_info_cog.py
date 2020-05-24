@@ -9,13 +9,13 @@ class TickerInfoCog(BaseCog):
     def __init__(self, bot):
         super().__init__(bot)
 
-    @commands.command()
+    @commands.command(aliases=['info'])
     async def summary(self, ctx, *, ticker):
         info = TickerInfo(ticker)
         for _info in info.ticker_info_summary():
             await ctx.send(_info)
     
-    @commands.command()
+    @commands.command(aliases=['price-info', 'info-price'])
     async def price(self, ctx, *, ticker):
         info = TickerInfo(ticker)
         for _info in info.ticker_info_price():

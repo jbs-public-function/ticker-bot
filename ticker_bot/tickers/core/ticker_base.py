@@ -10,7 +10,7 @@ class TickerBase(TickerCache):
     TICKER_ATTRIBUTE = None
     TICKER_CACHE_SECONDS = 900
     def __init__(self, ticker: str):
-        self._ticker = ticker
+        self._ticker = ticker.strip().upper()
         super().__init__(self.TICKER_ATTRIBUTE, self.TICKER_CACHE_SECONDS)
         
     @property
