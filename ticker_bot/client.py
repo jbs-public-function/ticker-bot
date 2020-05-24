@@ -30,15 +30,19 @@ def client():
 
 
 if __name__ == '__main__':
+    import time
     exception_count = 3
     exceptions = []
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger('__main__')
     while True:
         try:
+            logger.info('Client is starting')
             client()
         except Exception as exc:
             logger.error(exc)
+            logger.info('Client is sleeping 7 minutes')
+            time.sleep(450)
             exceptions.append(exc)
             if len(exceptions) == exception_count:
                 raise Exception(exceptions)
