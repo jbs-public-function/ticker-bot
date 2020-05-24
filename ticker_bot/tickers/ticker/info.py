@@ -2,9 +2,10 @@ from ticker_bot.tickers.core.ticker_base import TickerBase
 
 
 class TickerInfo(TickerBase):
+    
     LABEL = 'TickerInfo'
     TICKER_ATTRIBUTE = 'info'
-    TICKER_CACHE_SECONDS = 86400
+    
     def __init__(self, ticker):
         super().__init__(ticker)
 
