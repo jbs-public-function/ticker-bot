@@ -5,7 +5,7 @@ from cogs.base_cog import BaseCog
 
 
 class TickerCalendarCog(BaseCog):
-    LABEL = 'TickerHistoryCog'
+    LABEL = 'TickerCalendarCog'
     def __init__(self, bot):
         super().__init__(bot)
 
