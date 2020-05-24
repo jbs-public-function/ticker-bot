@@ -27,7 +27,7 @@ class TickerInfoCog(BaseCog):
         for _info in info.ticker_info_volume():
             await ctx.send(_info)
 
-    @commands.command()
+    @commands.command(aliases=['price-earnings'])
     async def pe(self, ctx, *, ticker):
         info = TickerInfo(ticker)
         for _info in info.ticker_info_pe():
