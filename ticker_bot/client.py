@@ -1,3 +1,7 @@
+import os
+
+from ticker_bot.cogs import base_cog, ticker_info_cog, ticker_history_cog, ticker_calendar_cog
+
 import discord
 from discord.ext import commands
 
@@ -15,11 +19,10 @@ async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
 
 
-from ticker_bot.cogs import bot, ticker_bot
+client.add_cog(base_cog.BaseCog(client))
+client.add_cog(ticker_info_cog.TickerInfoCog(client))
+client.add_cog(ticker_history_cog.TickerHistoryCog(client))
+client.add_cog(ticker_calendar_cog.TickerCalendarCog(client))
 
-client.add_cog(bot.Bot(client))
-client.add_cog(ticker_bot.TickerBot(client))
-
-import os
 client_token = os.environ.get('CLIENT_TOKEN')
 client.run(client_token)

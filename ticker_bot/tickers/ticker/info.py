@@ -17,7 +17,7 @@ class TickerInfo(TickerBase):
     def ticker_info_volume(self):
         return self.ticker_data_from_dict(self.ticker_info_volume_keys)
 
-    def ticker_info_market(self):
+    def ticker_info_pe(self):
         return self.ticker_data_from_dict(self.ticker_info_market_keys)
     
     @property

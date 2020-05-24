@@ -13,10 +13,10 @@ class TickerCalendar(TickerBase):
 
     @property
     def ticker_calendar_earnings_keys(self):
-        return {'Earnings Date': 'Upcoming Earnings',}
+        return {'Earnings Date': 'Upcoming Earnings Call',}
 
     def ticker_format_conversion(self, ticker):
         if ticker is None or len(ticker.to_dict()) == 0:
             return None
-        max_key = ticker.to_dict().keys()
+        max_key = max(ticker.to_dict().keys())
         return ticker.to_dict()[max_key]

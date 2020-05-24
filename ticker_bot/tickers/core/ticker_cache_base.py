@@ -97,7 +97,7 @@ class TickerCacheBase(TickerCacheEpochBase):
 
     @classmethod
     def hash_filename(cls, descriptors):
-        return str(hash(cls.stringify_descriptors(descriptors)))
+        return str(cls.stringify_descriptors(descriptors))
 
     @classmethod
     def stringify_descriptors(cls, descriptors):
