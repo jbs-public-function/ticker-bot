@@ -4,13 +4,14 @@
 #### requirements
  - discord==1.0.1
  - yfinance==0.1.5
-
+ - lxml==4.5.1
+ 
 ## functionality
-
 ### ticker information and commands
 #### General and Summary Information
 > $info GOOG, $summary GOOG
-```Symbol: GOOG
+```
+Symbol: GOOG
 Name: Alphabet Inc.
 Sector: Communication Services
 Market Cap: 964157571072
@@ -21,7 +22,8 @@ Denominated in: USD
 
 
 > $price GOOG, $price-info goog, $info-price GoOg
-```Daily High: 1412.76
+```
+Daily High: 1412.76
 Daily Low: 1392.02
 Last Close: 1402.8
 Last Open: 1396.71
@@ -39,7 +41,8 @@ Average Volume: 51660098
 
 
 > $pe AAPL, $price-earnings AAPL
-```Forward PE: 21.649017
+```
+Forward PE: 21.649017
 Trailing PE: 25.054213
 PEG Ratio: 2.05
 ```
@@ -63,7 +66,8 @@ Date               High               Low                Open               Clos
 #### Upcoming Earnings
 ##### this data is kinda sus
 >$earning AAPL, $calendar AAPL, $earnings AAPL
-```Upcoming Earnings for $AAPL
+```
+Upcoming Earnings for $AAPL
 Upcoming Earnings Call: 2020-08-03
 ```
 
