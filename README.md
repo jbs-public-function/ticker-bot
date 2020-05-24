@@ -9,7 +9,7 @@
 
 #### ticker information
 - summary info; ex - $info GOOG, $summary GOOG
-- - - ```Symbol: GOOG
+```Symbol: GOOG
 Name: Alphabet Inc.
 Sector: Communication Services
 Market Cap: 964157571072
